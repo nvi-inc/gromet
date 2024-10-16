@@ -1,26 +1,29 @@
-listen_address: 0.0.0.0:50001
+listen_address: met_server:50001
+# met_server is an example alias that can be used in /etc/hosts
 
 met:
-  address: 192.168.0.1:10001  # or eg /dev/ttyS0
+  address: met:10001  # or eg /dev/ttyS0
+# met on the address line is an example alias that can be used in /etc/hosts
   type: MET4A # or MET3 MET4
 
 wind:
-  address: 192.168.0.2:10002
+  address: met:10002
+# met on the address line is an example alias that can be used in /etc/hosts
 
 alerts:
   fs:
     enabled: false
 #     path: /usr2/fs/bin
-#   # If one component is known to be bad and you don't want to get alerts about it, 
+#   # If one component is known to be bad and you don't want to get alerts about it,
 #   # uncomment the corresponding line below
-#   mask: 
-#   #  - network 
-#   #  - humidity 
-#   #  - pressure 
-#   #  - temperature 
+#   mask:
+#   #  - network
+#   #  - humidity
+#   #  - pressure
+#   #  - temperature
 #   #  - fan
 #   #  - wind
 #   email:
-#     enabled: true 
+#     enabled: true
 #     addresses:
 #       - oper
